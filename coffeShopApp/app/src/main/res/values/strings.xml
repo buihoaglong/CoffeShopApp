@@ -2,4 +2,8 @@
     <string name="app_name">coffeShopApp</string>
     <string name="choice_your_nfavorite_coffe">Choice your\nFavorite Coffe</string>
     <string name="get_started">Get started</string>
+    <string name="search_anything">Search Anything....</string>
+    <string name="category">Category</string>
+    <string name="popular_coffes">Popular Coffes</string>
+    <string name="see_all">See all</string>
 </resources>
