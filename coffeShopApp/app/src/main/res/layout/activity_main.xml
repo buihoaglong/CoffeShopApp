@@ -58,13 +58,13 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/Banner"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:scaleType="fitXY"
-                    app:shapeAppearanceOverlay="@style/CircleImageView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/CircleImageView"
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                 <ProgressBar
@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:indeterminateTint="@color/orange"
                     android:indeterminateTintMode="src_in"
-                    app:layout_constraintBottom_toBottomOf="@+id/Banner"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +96,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:minHeight="100dp">
 
                 <ProgressBar
                     android:id="@+id/progressBarCategory"
@@ -116,9 +117,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
                     android:clipToPadding="false"
+                    android:minHeight="70dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -152,7 +155,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:minHeight="150dp">
 
                 <ProgressBar
                     android:id="@+id/progressBar2"
@@ -172,6 +176,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
                     android:clipToPadding="false"
+                    android:minHeight="150dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -211,8 +216,8 @@
 
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/btn_1" />
 
@@ -234,8 +239,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/btn_2" />
 
@@ -256,8 +261,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/btn_3" />
 
@@ -278,8 +283,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/btn_4" />
 
@@ -300,8 +305,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_gravity="center"
                         app:srcCompat="@drawable/btn_5" />
 
