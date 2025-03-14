@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
@@ -15,13 +14,13 @@ import com.example.coffeshopapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    private val viewModel=MainViewModel()
+    private val viewModel = MainViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding=ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         initBanner()
@@ -30,11 +29,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initBanner() {
-        binding.progressBarBanner.visibility= View.VISIBLE
+        binding.progressBarBanner.visibility = View.VISIBLE
         viewModel.loadBanner().observeForever {
-            Glide.with(this@MainActivity)
-                .load(it[0].url)
-                .into(binding.Banner)
+            Glide.with(this@MainActivity).load(it[0].url).into(binding.Banner)
             binding.progressBarBanner.visibility = View.GONE
 
             viewModel.loadBanner()
@@ -42,26 +39,24 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun initCategory(){
-        binding.progressBarCategory.visibility=View.VISIBLE
+    private fun initCategory() {
+        binding.progressBarCategory.visibility = View.VISIBLE
         viewModel.loadCategory().observeForever {
-            binding.recyclerViewCategory.layoutManager=
-                LinearLayoutManager(this@MainActivity
-                ,LinearLayoutManager.HORIZONTAL,
-                    false
-                )
+            binding.recyclerViewCategory.layoutManager = LinearLayoutManager(
+                this@MainActivity, LinearLayoutManager.HORIZONTAL, false
+            )
 
-            binding.recyclerViewCategory.adapter=CategoryAdapter(it)
-            binding.progressBarCategory.visibility=View.GONE
+            binding.recyclerViewCategory.adapter = CategoryAdapter(it)
+            binding.progressBarCategory.visibility = View.GONE
         }
         viewModel.loadCategory()
     }
 
-    private fun initPopular(){
-        binding.progressBar2.visibility=View.VISIBLE
+    private fun initPopular() {
+        binding.progressBar2.visibility = View.VISIBLE
         viewModel.loadPopular().observeForever {
-            binding.recyclerViewPopularCoffe.layoutManager=GridLayoutManager(this,2)
-            binding.recyclerViewPopularCoffe.adapter=PopularAdapter(it)
+            binding.recyclerViewPopularCoffe.layoutManager = GridLayoutManager(this, 2)
+            binding.recyclerViewPopularCoffe.adapter = PopularAdapter(it)
             binding.progressBar2.visibility = View.GONE
         }
         viewModel.loadPopular()
