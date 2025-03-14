@@ -21,4 +21,8 @@ class MainViewModel:ViewModel() {
     fun loadPopular():LiveData<MutableList<itemsModel>>{
         return repository.loadPopular()
     }
+
+    fun loadItems(categoryId:String):LiveData<MutableList<itemsModel>>{
+        return repository.loadItemCategory(categoryId)
+    }
 }

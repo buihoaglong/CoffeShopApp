@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@color/lightCream"
+    android:background="@drawable/cream_top_corner_bg"
     android:layout_height="match_parent"
     tools:context=".Activity.DetailActivity">
     <ScrollView
@@ -72,7 +72,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="360dp"
+                android:layout_height="match_parent"
                 android:layout_marginTop="-50dp"
                 android:background="@drawable/cream_top_corner_bg"
                 android:orientation="vertical"
@@ -95,12 +95,12 @@
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Coffe Size"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
                     android:layout_marginStart="16sp"
-                    android:textColor="@color/darkBrown"
                     android:layout_marginTop="16dp"
+                    android:text="Coffe Size"
+                    android:textColor="@color/darkBrown"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
 
                     />
 
@@ -117,8 +117,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30sp"
                         android:layout_weight="1"
-                        android:text="Small"
                         android:gravity="center"
+                        android:text="Small"
                         android:textColor="@color/darkBrown"
                         android:textStyle="bold" />
 
@@ -127,8 +127,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30sp"
                         android:layout_weight="1"
-                        android:text="Medium"
                         android:gravity="center"
+                        android:text="Medium"
                         android:textColor="@color/darkBrown"
                         android:textStyle="bold" />
 
@@ -137,8 +137,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30sp"
                         android:layout_weight="1"
-                        android:text="Large"
                         android:gravity="center"
+                        android:text="Large"
                         android:textColor="@color/darkBrown"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -153,17 +153,17 @@
                         android:id="@+id/textView12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Qty."
                         android:layout_gravity="center_vertical"
+                        android:text="Qty."
                         android:textColor="@color/darkBrown"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="90dp"
-                        android:background="@drawable/stroke_brown_bg"
+                        android:layout_height="27dp"
                         android:layout_marginStart="16dp"
-                        android:layout_height="27dp">
+                        android:background="@drawable/stroke_brown_bg">
 
                         <TextView
                             android:id="@+id/minusBtn"
@@ -192,13 +192,13 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/numberitemTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1"
+                            android:textColor="@color/darkBrown"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="@color/darkBrown"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/plusCart"
                             app:layout_constraintStart_toEndOf="@+id/minusBtn"
@@ -209,12 +209,12 @@
                         android:id="@+id/ratingTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_weight="1"
+                        android:text="0"
                         android:textAlignment="textEnd"
                         android:textColor="@color/darkBrown"
                         android:textStyle="bold"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
                         tools:ignore="RtlCompat" />
 
                     <ImageView
@@ -230,10 +230,10 @@
                     android:id="@+id/textView17"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
                     android:layout_marginStart="16sp"
                     android:layout_marginTop="16dp"
                     android:text="Description"
-                    android:layout_margin="16dp"
 
                     android:textColor="@color/darkBrown"
                     android:textSize="18sp"
@@ -245,15 +245,14 @@
                     android:id="@+id/descriptionTxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textColor="@color/darkBrown"
                     android:layout_marginHorizontal="16dp"
-                    />
+                    android:text="TextView"
+                    android:textColor="@color/darkBrown" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/addToCartBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginVertical="30dp"
                     android:background="@drawable/brown_full_corner_bg">
@@ -272,7 +271,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/priceTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="32dp"
@@ -292,7 +291,7 @@
                         android:layout_marginVertical="12dp"
                         android:background="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/textView20"
+                        app:layout_constraintEnd_toStartOf="@+id/priceTxt"
                         app:layout_constraintTop_toTopOf="parent" />
 
 
